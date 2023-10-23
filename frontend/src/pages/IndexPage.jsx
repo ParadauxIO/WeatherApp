@@ -4,7 +4,7 @@ import WeatherInfo from "../components/WeatherInfo";
 
 export default function IndexPage() {
     const [searchQuery, setSearchQuery] = useState("");
-    const [currentCity, setCurrentCity] = useState("Dublin");
+    const [currentCity, setCurrentCity] = useState("");
 
     function onSubmit(e) {
         e.preventDefault();

@@ -43,13 +43,8 @@ export default function WeatherInfo({ currentCity }) {
 
     const forecast = [];
 
-    for (let i = 0; i < forecastData.list.length; i +=8 ) {
-        forecast.push((
-            <ForecastItem
-                item={forecastData.list[i]}
-                index={i}
-            />
-        ))
+    for (let i = 0; i < forecastData.list.length; i += 8) {
+        forecast.push(forecastData.list[i]);
     }
 
     console.log(forecast)
@@ -86,7 +81,32 @@ export default function WeatherInfo({ currentCity }) {
                     <div className="info-box">
                         <h2> Packing Guide </h2>
                         <hr />
-                        
+
+                        <ul className="packing-list">
+                            {forecast.some(item => item.weather[0].main.toLowerCase().includes("rain")) && (
+                                <li>You should pack an umbrella.</li>
+                            )}
+
+                            {forecast.some(item => (parseInt(item.main.temp) - 273.15) < 13) && (
+                                <li>You should pack for Cold Weather.</li>
+                            )}
+
+                            {forecast.some(
+                                item =>
+                                    (parseInt(item.main.temp) - 273.15) < 23 &&
+                                    (parseInt(item.main.temp) - 273.15) > 13
+                            ) && (
+                                    <li>You should pack for Mild Weather.</li>
+                            )}
+
+                            {forecast.some(item => (parseInt(item.main.temp) - 273.15) > 23) && (
+                                <li>You should pack for Hot Weather.</li>
+                            )}
+
+
+
+                        </ul>
+
                     </div>
                 </div>
 
@@ -95,7 +115,12 @@ export default function WeatherInfo({ currentCity }) {
                         <h2>Forecast</h2>
                         <hr />
                         <div className="forecast-content">
-                            {forecast}
+                            {forecast.map((item, index) => (
+                                <ForecastItem
+                                    item={item}
+                                    index={index}
+                                />
+                            ))}
                         </div>
                     </div>
                 </div>
