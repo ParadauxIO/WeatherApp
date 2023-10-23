@@ -1,0 +1,53 @@
+.weather-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left-bar {
+    width: 48%;
+}
+
+.right-bar {
+    width: 48%;
+}
+
+.info-box {
+    background-color: #fefae0;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
+
+.city-info {
+    background-color: #fefae0;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.forecast-content {
+    background-color: #fefae0;
+    border-radius: 12px;
+    padding: 1rem;
+    max-height: 50dvh;
+    overflow-y: scroll;
+}
+
+.info-content {
+    padding-top: .5rem;
+}
+
+.forecast-content {
+    padding-top: .5rem;
+}
+
+.info-key {
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+.info-value {
+    margin-left: auto
+}
+

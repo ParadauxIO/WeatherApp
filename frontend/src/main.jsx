@@ -7,6 +7,11 @@ import {
 } from "react-router-dom";
 import IndexPage from './pages/IndexPage';
 
+import "./styles/fonts.scss"
+import "./styles/global.scss"
+import "./styles/reset.scss"
+import "./styles/utilities.scss"
+
 const router = createBrowserRouter([
   {
     path: "/",

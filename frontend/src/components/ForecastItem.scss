@@ -1,0 +1,32 @@
+.forecast-item {
+    border: 1px solid #AAA;
+    border-radius: 12px;
+    margin: .5rem; 
+
+}
+
+.forecast-title {
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.forecast-info {
+    display: flex;
+    padding-inline: 2rem;
+    border-bottom: 1px solid #AAA;
+    margin: 0.25rem;
+}
+
+.forecast-key {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.forecast-value {
+    margin-left: auto;
+}
